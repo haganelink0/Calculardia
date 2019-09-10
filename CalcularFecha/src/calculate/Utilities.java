@@ -1,26 +1,28 @@
 package calculate;
 
+
 public class Utilities {
+
 	
-	public String dayOfTheWeek(int day) {
+	public static String dayOfTheWeek(int day) {
 		if (day == 1) {
-			return "Tuesday";
-		} else if (day == 2) {
-			return "Wednesday";
-		} else if (day == 3) {
-			return "Thursday";
-		} else if (day == 4) {
-			return "Friday";
-		} else if (day == 5) {
-			return "Saturday";
-		} else if (day == 6) {
 			return "Sunday";
-		} else {
+		} else if (day == 2) {
 			return "Monday";
+		} else if (day == 3) {
+			return "Tuesday";
+		} else if (day == 4) {
+			return "Wednesday";
+		} else if (day == 5) {
+			return "Thursday";
+		} else if (day == 6) {
+			return "Friday";
+		} else {
+			return "Saturday";
 		}
 	}
 	
-	public int daysinMonths(int month) {
+	public static int daysinMonths(int month) {
 		int totalMonth = (month - 1) * 30;
 		if (month <= 2 || month == 5 || month == 6) {
 			totalMonth += 1;
@@ -35,6 +37,22 @@ public class Utilities {
 		}
 		return totalMonth;
 	}
+	 
+	 public static int anioBisiesto(int year) {
+			if (year % 4 == 0) {
+				if (year % 100 == 0) {
+					if (year % 400 == 0) {
+						return 1;
+					} else {
+						return 0;
+					}
+				} else {
+					return 1;
+				}
+			} else {
+				return 0;
+			}
+		}
 
 
 }
