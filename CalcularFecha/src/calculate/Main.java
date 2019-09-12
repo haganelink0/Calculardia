@@ -7,7 +7,7 @@ public class Main {
 		Scanner reader = new Scanner(System.in);
 		Calculator calc = new Calculator();
 		Menu one = new Menu(reader, calc);
-		one.pedirFecha();
+		one.start();
 		
 
 	}
